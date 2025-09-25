@@ -1,1 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int x;
+    cout << "Please enter a number: ";
+    cin >> x;
+    if(x < 0) {
+        if(x%2 == 0) {
+            cout << "The number is even" << endl;
+        }else {
+            cout << "The number is odd" << endl;
+        }
+        cout << "Negative" << endl;
+    }else {
+        if(x%2 == 0) {
+            cout << "The number is even" << endl;
+        }else {
+            cout << "The number is odd" << endl;
+        }
+        cout << "Positive" << endl;
+    }return 0;
+}
 
