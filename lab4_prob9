@@ -1,1 +1,17 @@
-
+#include <iostream>
+using namespace std;
+int main(){
+    float a;
+    cout<<"Enter the speed of the vehicle: "<<endl;
+    cin>>a;
+    if (a<20){
+        cout<<"too slow"<<endl;
+        
+    }else if(a>80){
+        cout<<"too fast"<<endl;
+    
+    }else{
+        cout<<"just right"<<endl;
+    }
+    return 0;
+}
