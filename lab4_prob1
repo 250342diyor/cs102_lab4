@@ -5,7 +5,7 @@ int main() {
     cout << "Please enter a number: ";
     cin >> x;
     if(x < 0) {
-        cout << "Positive" << endl;
+        cout << "Negative" << endl;
     }else {
         cout << "Positive" << endl;
     }return 0;
