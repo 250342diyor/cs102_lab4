@@ -1,1 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
 
+int main() {
+    char c;
+    cout << "Enter language code (u,e,r,g): ";
+    cin >> c;
+
+    string text;
+    if (c == 'u') text = "Assalomu alaykum";
+    else if (c == 'e') text = "Hello";
+    else if (c == 'r') text = "Privet";
+    else if (c == 'g') text = "Hallo";
+    else { cout << "I do not know this language.\n"; return 0; }
+
+    cout << text << endl;
+
+    string cmd = "PowerShell -Command \"Add-Type -AssemblyName System.Speech; "
+                 "(New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('"
+                 + text + "');\"";
+
+    system(cmd.c_str());
+    return 0;
+}
