@@ -1,1 +1,20 @@
-
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int main(){
+    char g;
+    int my_rand, a=10, b=20;
+    srand((unsigned) time(NULL));
+while (1) {
+    my_rand =rand()%20;
+    cout << "Please guess  is a number even or odd? You can write \n e-even \n o-odd" << endl;
+    cin >> g;
+    if ((my_rand%2 == 0 && g == 'e') || (my_rand%2==1 && g=='o')) {
+        cout <<"You WIN\n The number is " << my_rand <<endl;
+    }else
+        cout << "Game over!!!\n The number is " << my_rand <<endl;
+    if (g == 'q')
+        break;
+}
+    return 0;
+}
